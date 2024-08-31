@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>JMS Fullstack Developer</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "82DlMLy6QkFkNmpRa",
+            });
+        })();
+    </script>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="menu">
+            <div class="principal">
+                <p id="name">Juan Marcos Sandoval</p>
+                <p id="profesion">Desarrollador Full Stack</p>
+            </div>
+            <div class="buttons">
+                <button class="tablinks" onclick="openSection(event, 'Aboutme')" id="defaultOpen">SOBRE MI</button>
+                <button class="tablinks" onclick="openSection(event, 'Experience')">EXPERIENCIA</button>
+                <button class="tablinks" onclick="openSection(event, 'Tecnologys')">TECNOLOGIAS</button>
+            </div>
+        </div>
+    
+        <div id="Aboutme" class="tabcontent">
+            <div class="perfil">
+                <div class="detalles">
+                    <div class="foto"></div>
+                
+                    <div class="item">
+                        <img class="icon" src="img/ico/facu.ico">
+                        <p>Licenciatura en sistemas <br>
+                            UNLP (inconcluso)</p>
+                    </div>
+                
+                    <div class="item">
+                        <img class="icon" src="img/ico/facu.ico">
+                        <p>Técnico analista de sistemas <br>
+                            IFTyD N°12 (graduado)</p>
+                    </div>
+                
+                    <!--div class="item">
+                        <img class="icon" src="img/ico/telefono.ico">
+                        <p>+ 54 9 221 6168183</p>
+                    </div>
+                
+                    <div class="item">
+                        <img class="icon" src="img/ico/email.ico">
+                        <p>juanmarcos.sandoval@gmail.com</p>
+                    </div-->
+                
+                    <div class="item">
+                        <img class="icon" src="img/ico/casa.ico">
+                        <p>Magdalena, Buenos Aires</p>
+                    </div>
+                
+                    <div class="item">
+                        <img class="icon" src="img/ico/nacimiento.ico">
+                        <p>20-12-1990</p>
+                    </div>
+                </div>
+            
+                <div class="sobremi">
+
+                    <p>
+                        Poseo 5 años de experiencia desarrollando programación orientada a objetos, programación orientada aspectos, programación funcional, micro servicios, servicios REST, SOAP, aplicaciones web o de escritorio, así como también en soporte y mantenimiento a proyectos legacy. 
+                    </p>
+                        
+                    <p>
+                        He trabajado JAVA desde versión 6 a 21 y sus frameworks mas conocidos, implementando lo mejor posible los principios de SOLID, clean code y patrones de diseño. Tengo amplio manejo de tecnologías para diseño y maquetación web. Además utilizo motores de bases de datos relacionales y no relacionales.
+                    </p>
+
+                    <p>
+                        Estoy acostumbrado a desenvolverme en ambientes ágiles, tanto individualmente como en pequeñas células. Mantengo un carácter sereno cuando los tiempos apremian, expreso de manera directa ideas y posibles soluciones, no reparo en ofrecer ayuda al resto equipo.
+                    </p>
+                
+                    <p>
+                        Estoy interesado en un ambiente laboral que me permita ser autodidacta ante las nuevas tecnologías, adquirir experiencia y poner en práctica mis conocimientos de programación reactiva, DevOps y Cloud. Me encuentro cómodo al tener algo de responsabilidad y en algún momento me gustaría llegar desempeñarme como referente técnico.
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div id="Experience" class="tabcontent">
+            <div class="time">
+                <div class="time-item" style="--accent-color:#56a97a">
+                    <div class="date">Enero 2023</div>
+                    <div class="company">COLDVIEW AMCO</div>
+                    <div class="title">Full Stack Developer</div>
+                    <div class="descr">
+                        Desarrollo de Web-Services y Web-Applications para la manipulación de datos fiscales en batch.
+                        Soporte y mantenimiento de microservicios, servicios soap cifrados y servicios rest.
+                        Manipulación de certificados X509. Integración con Active Directory. Maquetado web en PrimeReact.
+                        <br>
+                        <div class="tooltip">tecnologias
+                            <ul class="tooltiptext">
+                                <li>JAVA 8</li>
+                                <li>SWING</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JAVASCRIPT</li>
+                                <li>MYSQL</li>
+                                <li>APACHE POI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="time-item" style="--accent-color:#bb4c62">
+                    <div class="date">Abril 2022</div>
+                    <div class="company">OPEN DEV</div>
+                    <div class="title">Full Stack Developer</div>
+                    <div class="descr">
+                        Desarrollo en springboot de microservicios y programación orientada aspectos para la gestión de prestaciones médicas. 
+                        Diseño web y programación reactiva en ANGULAR 10 y  RxJs. 
+                        Desarrollo continuo y despliegue de versiones Canarias.
+                        <br>
+                        <div class="tooltip">tecnologias
+                            <ul class="tooltiptext">
+                                <li>JAVA 8</li>
+                                <li>SWING</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JAVASCRIPT</li>
+                                <li>MYSQL</li>
+                                <li>APACHE POI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="time-item" style="--accent-color:#c1643d">
+                    <div class="date">Noviembre 2021</div>
+                    <div class="company">SYSONE</div>
+                    <div class="title">Full Stack Developer</div>
+                    <div class="descr">
+                        Desarrollo a medida según las necesidades de los clientes del mercado asegurador.
+                        Web-Applications monolíticas en sprigboot, JSF y PrimeFaces.
+                        Integración continua y despliegue con Jenkins.  
+                        Introducción, adaptación y seguimiento de los dev trainees.
+                        <br>
+                        <div class="tooltip">tecnologias
+                            <ul class="tooltiptext">
+                                <li>JAVA 8</li>
+                                <li>SWING</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JAVASCRIPT</li>
+                                <li>MYSQL</li>
+                                <li>APACHE POI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="time-item" style="--accent-color:#3c7ea9">
+                    <div class="date">Enero 2020</div>
+                    <div class="company">UCOMPANY</div>
+                    <div class="title">Back End Developer</div>
+                    <div class="descr">
+                        Proyecto móvil de la StartUp enfocado en el sector retail y orientado al contacto con minoristas.
+                        Desarrollo y mantenimiento de microservicios en sprinboot. 
+                        Automatización de envio de emails promocionales e informativos.
+                        <br>
+                        <div class="tooltip">tecnologias
+                            <ul class="tooltiptext">
+                                <li>JAVA 8</li>
+                                <li>SWING</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JAVASCRIPT</li>
+                                <li>MYSQL</li>
+                                <li>APACHE POI</li>
+                            </ul>
+                        </div> 
+                    </div>
+                </div>
+                <div class="time-item" style="--accent-color:#38adad">
+                    <div class="date">Agosto 2019</div>
+                    <div class="company">IOMA CENTRAL LA PLATA</div>
+                    <div class="title">Analista de sistemas</div>
+                    <div class="descr">
+                        Relevamiento, análisis, diseño e implementación de un sistema de auditorias asistido por procesamiento de datos.
+                        Realización de documentación, puesta en marcha y capacitación al personal para su uso.
+                        <br>
+                        <div class="tooltip">tecnologias
+                            <ul class="tooltiptext">
+                                <li>JAVA 8</li>
+                                <li>SWING</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JAVASCRIPT</li>
+                                <li>MYSQL</li>
+                                <li>APACHE POI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="Tecnologys" class="tabcontent">
+            <div class="subtec" style="--accent-color:#38adad">
+                <h2>BACK END</h2>
+            </div>
+            <div class="card-list">
+                <div class="card">
+                    <img src="img/tec/JAVA.jpg" />
+                    <div class="card-description">
+                        JAVA 6 a 21
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/SPRING.jpg" />
+                    <div class="card-description">
+                        SPRING
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/SPRINGBOOT.jpg" />
+                    <div class="card-description">
+                        SPRINGBOOT v3
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/JWT.jpg" />
+                    <div class="card-description">
+                        JASON WEB TOKEN
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/HIBERNATE.jpg" />
+                    <div class="card-description">
+                        HIBERNATE
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/JUNIT.jpg" />
+                    <div class="card-description">
+                        JUNIT 4 Y 5
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/MOCKITO.jpg" />
+                    <div class="card-description">
+                        MOCKITO
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/MAVEN.jpg" />
+                    <div class="card-description">
+                        MAVEN
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/GRADLE.jpg" />
+                    <div class="card-description">
+                        GRADLE
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/SWAGGER.jpg" />
+                    <div class="card-description">
+                        SWAGGER
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/JENKINS.jpg" />
+                    <div class="card-description">
+                        JENKINS
+                    </div>
+                </div>
+            </div>
+    
+            <div class="subtec" style="--accent-color:#bb4c62">
+                <h2>FRONT END</h2>
+            </div>
+            <div class="card-list">
+                <div class="card">
+                    <img src="img/tec/HTML.jpg" />
+                    <div class="card-description">
+                        HTML 5
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/JS.jpg" />
+                    <div class="card-description">
+                        JAVASCRIPT
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/CSS.jpg" />
+                    <div class="card-description">
+                        CSS 3
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/TYPESCRIPT.jpg" />
+                    <div class="card-description">
+                        TYPESCRIPT
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/ANGULAR.jpg" />
+                    <div class="card-description">
+                        ANGULAR
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/REACT.jpg" />
+                    <div class="card-description">
+                        REACT
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/NODE.jpg" />
+                    <div class="card-description">
+                        NODE JS
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/JSF.jpg" />
+                    <div class="card-description">
+                        JAVA SERVER FACES
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/PRIME.jpg" />
+                    <div class="card-description">
+                        PRIME FACES
+                    </div>
+                </div>
+            </div>
+    
+            <div class="subtec" style="--accent-color:#3c7ea9">
+                <h2>BASE DE DATOS</h2>
+            </div>
+            <div class="card-list">
+                <div class="card">
+                    <img src="img/tec/PLSQL.jpg" />
+                    <div class="card-description">
+                        ORACLE PLSQL
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/MYSQL.jpg" />
+                    <div class="card-description">
+                        MYSQL
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/SQLITE.jpg" />
+                    <div class="card-description">
+                        SQLITE
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/SQL SERVER.jpg" />
+                    <div class="card-description">
+                        MICROSOFT SQL SERVER
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/MONGO.jpg" />
+                    <div class="card-description">
+                        MONGO DB
+                    </div>
+                </div>
+            </div>
+    
+            <div class="subtec" style="--accent-color:#c1643d">
+                <h2>SOFTWARE Y HERRAMIENTAS</h2>
+            </div>
+            <div class="card-list">
+                <div class="card">
+                    <img src="img/tec/SCRUM.jpg" />
+                    <div class="card-description">
+                        SCRUM
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/JIRA.jpeg" />
+                    <div class="card-description">
+                        JIRA
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/POSTMAN.jpg" />
+                    <div class="card-description">
+                        POSTMAN
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/INSOMNIA.jpg" />
+                    <div class="card-description">
+                        INSOMNIA
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/ECLIPSE.jpg" />
+                    <div class="card-description">
+                        ECLIPSE
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/NETBEANS.jpg" />
+                    <div class="card-description">
+                        NETBEANS
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/INTELLIJ.jpeg" />
+                    <div class="card-description">
+                        INTELLIJ IDEA
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/VSC.jpg" />
+                    <div class="card-description">
+                        VISUAL STUDIO CODE
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/GIT.jpg" />
+                    <div class="card-description">
+                        GIT CSM
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tec/DBEAVER.jpg" />
+                    <div class="card-description">
+                        DBEAVER
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="links">
+            <div class="item-link">
+                <a onclick="openEmailModal()">
+                <img src="img/links/email.png"></a>
+            </div>
+
+            <div class="item-link">
+                <a href="https://wa.me/5492216168183" target="_blank">
+                <img src="img/links/whatsapp.png"></a>
+            </div>
+
+            <div class="item-link">
+                <a href="https://github.com/juanmarcossandoval" target="_blank">
+                <img src="img/links/github.png"></a>                
+            </div>
+
+            <div class="item-link">
+                <a href="https://www.linkedin.com/in/juan-marcos-sandoval/" target="_blank">
+                <img src="img/links/linkedin.png"></a>
+            </div>
+
+            <div class="item-link">
+                <a href="https://www.dropbox.com/scl/fi/whca852ugnb5p73sj50zh/CV-Juan-Marcos-Sandoval-2024.pdf?rlkey=8vzpbgep2i77hfbjtv4rtb9xg&st=9z9eatmx&dl=0" target="_blank">
+                <img src="img/links/CV.png"></a>
+            </div>
+        </div>
+
+        <div id="emailModal" class="emailModal">
+            <span class="closeEmailModal" onclick="closeEmailModal()">X</span>
+            <form class="emailModalContent">
+                <h2>Contactame</h2>
+                <div class="email-inputs">
+                    <div class="email-data">
+                        <input type="email" id="email" required> 
+                        <label>Email</label>                       
+                    </div>
+                    <div class="email-data">
+                        <input type="text" id="subject" required>
+                        <label>Asunto</label>                    
+                    </div>
+                </div>                
+                <div class="email-msg">
+                    <textarea id="msg" placeholder="Escriba aqui su mensaje" required spellcheck="false"></textarea>
+                    <label>Mensaje</label>                   
+                </div>
+                <button class="btn-email" onclick="sendEmail(event)">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

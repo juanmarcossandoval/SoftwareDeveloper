@@ -1,0 +1,517 @@
+:root{
+    --black:#1b1f23;
+    --spring: #6db52c;
+    --grey: #262b2c;
+    --grey-two: #323839;
+    --white: #fefffe;
+    --invalid: #c70f0f;
+    --modal-background: rgba(249, 249, 249, 0.4);
+    --modal-content-background: #e7e1d7;
+}
+
+body {
+    margin: 0;
+    color: var(--white);
+    background-color: var(--black);
+    font-family: "Montserrat", sans-serif; 
+}
+
+/**************************** FLOATING LINKS ****************************/
+.links{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.item-link{
+    margin: 10px;
+}
+
+.item-link img {
+    cursor: pointer;
+    background-color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+.item-link img:hover{
+    transform: translateY(-0.5rem) scale(1.0125);
+	box-shadow: 0.15rem 0.15rem 0.35rem  var(--white); 
+}
+
+/**************************** EMAIL MODAL ****************************/
+
+.closeEmailModal{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    font-size: 2.5rem;
+    font-weight: 900;
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    background-color: var(--modal-content-background);
+    color: var(--black);
+    cursor: pointer;
+    border: 2px solid;
+}
+
+.emailModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--modal-background);
+}
+
+.emailModalContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--modal-content-background);
+    border: 0.2rem solid var(--black);
+    border-radius: 2rem;
+    width: 70%;
+    height: 70vh;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+
+.emailModalContent h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--black);
+    font-weight: 500;
+}
+
+.email-inputs {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.email-inputs div{
+    position: relative;
+    display: flex;
+    width: 40%;
+}
+
+.email-inputs input {
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid var(--black);
+    color: var(--black);
+    margin: 0px 0px 4rem 1rem;
+    font-size: 1.25rem;
+    width: 100%;
+}
+
+.email-data label {
+    position: absolute;
+    top: -2rem;
+    padding-left: 1rem;
+    pointer-events: none;
+    color: var(--spring);
+}
+
+.email-data input:invalid ~ label{
+    color: var(--invalid);
+}
+
+.email-msg{
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.email-msg label{
+    position: absolute;
+    top: -2rem;
+    left: 10%;
+    color: var(--spring);
+}
+
+.email-msg textarea{
+    background: transparent;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 10px 0px 0px 0px solid var(--black);
+    resize: none;
+    color: var(--black);
+    font-size: 1.25rem;
+    font-family: "Montserrar", sans-serif;
+    width: 80%;
+    height: 100%;
+}
+
+.email-msg textarea:invalid ~ label {
+    color: var(--invalid);
+} 
+
+.btn-email{
+    width: 120px;
+    height: 60px;
+    color: var(--white);
+    background-color: var(--spring);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+/**************************** ESTILO DE LAS PESTAÑAS DEL MAIN ****************************/
+.menu {
+    display: flex;
+    background-color: var(--grey);
+    border-top: 5px solid var(--spring);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.principal {
+    padding: 15px;
+    width: 30%;
+}
+
+.principal p {
+    margin: 0;
+}
+
+#name{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#profesion{
+    font-size: 1.25rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 70%;
+}
+
+/* Style the buttons that are used to open the tab content */
+.menu button {
+    background-color: var(--grey);
+    border-color: var(--grey);
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+    cursor: pointer;
+    padding: 15px;
+    color: var(--white);
+    margin-right: 5px;
+    font-size: 1.25rem;
+}
+
+.menu button:hover{
+    background-color: var(--black);
+    border-top: var(--grey-two);
+    border-style: solid;
+    border-width: 3px 0px 0px 0px;
+}
+
+/* Create an active/current tablink class */
+.menu button.active {
+    border-top: 3px solid var(--spring);
+    background-color: var(--black);
+}
+
+/* Style the tab content */
+.tabcontent {
+    padding: 1rem;
+}
+
+/************************************ ASIDE ***********************************/
+
+.perfil{
+    display: flex;
+}
+
+.detalles{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.foto {
+    background-image: url(img/perfil.jpg);
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    align-self: center;
+    margin: 25px;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.item:hover{
+    border-left: 5px solid var(--spring);
+    font-weight: bold;
+}
+
+.icon {
+    height: 32px;
+}
+
+.item p{
+    margin:1rem;
+}
+
+.sobremi {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 3rem;
+    font-size: 1.5rem;
+}
+
+/******************** TIME LINE ************************/
+.time {
+    --col-gap: 1.25rem;
+    --row-gap: 1.25rem;
+    --line-w: 0.25rem;
+    display: grid;
+    grid-template-columns: var(--line-w) 1fr;
+    grid-auto-columns: max-content;
+    column-gap: var(--col-gap);
+    width: min(100rem, 90%);
+    margin-inline: auto;
+}
+
+/* line */
+.time::before {
+    content: "";
+    grid-column: 1;
+    grid-row: 1 / span 20;
+    background: var(--white);
+    border-radius: calc(var(--line-w) / 2);
+}
+
+/* columns*/
+
+/* row gaps */
+.time-item:not(:last-child) {
+    margin-bottom: var(--row-gap);
+}
+
+/* card */
+.time-item {
+    grid-column: 2;
+    --inlineP: 1.5rem;
+    margin-inline: var(--inlineP);
+    grid-row: span 2;
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+    color: var(--accent-color);
+}
+
+/* date */
+.date {
+    --dateH: 2rem;
+    height: var(--dateH);
+    margin-inline: calc(var(--inlineP) * -1);
+    text-align: center;
+    background-color: var(--accent-color);
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: grid;
+    place-content: center;
+    position: relative;
+    border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+}
+
+/* date flap */
+.date::before {
+    content: "";
+    width: var(--inlineP);
+    aspect-ratio: 1;
+    background: var(--accent-color);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
+    position: absolute;
+    top: 100%;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    right: 0;
+}
+
+/* circle */
+.date::after {
+    content: "";
+    position: absolute;
+    width: .75rem;
+    aspect-ratio: 1;
+    background: var(--accent-color);
+    border: 0.5rem solid var(--accent-color);
+    border-radius: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+}
+
+/* title company descr  */
+.title,
+.company,
+.descr {
+    background: var(--white);
+    position: relative;
+    padding-inline: 1.5rem;
+    padding-block-start: 1rem;
+}
+
+.title {
+    overflow: hidden;
+    font-style: italic;
+}
+
+.descr {
+    padding-block-end: 1.5rem;
+}
+
+.company {
+    font-weight: 600;
+}
+
+/* Tooltip container */
+.tooltip {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-top: 1rem;
+    border-top: 1px dotted;
+}
+
+/* Tooltip text */
+.tooltiptext {
+    visibility: hidden;
+    background-color: var(--grey);
+    color: var(--white);
+    border-radius: 6px;
+    padding: 1rem 1rem 1rem 2rem;
+    /* Position the tooltip text */
+    position: absolute;
+    bottom: 125%;
+    margin-left: -60px;
+}
+
+/* Tooltip arrow */
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--grey) transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+@media (min-width: 40rem) {
+    .time {
+        grid-template-columns: 1fr var(--line-w) 1fr;
+    }
+
+    .time::before {
+        grid-column: 2;
+    }
+
+    .time-item:nth-child(odd) {
+        grid-column: 1;
+    }
+
+    .time-item:nth-child(even) {
+        grid-column: 3;
+    }
+
+    /* start second card */
+    .time-item:nth-child(2) {
+        grid-row: 2/4;
+    }
+
+    .time-item:nth-child(odd) .date::before {
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+        left: 0;
+    }
+
+    .time-item:nth-child(odd) .date::after {
+        transform: translate(-50%, -50%);
+        left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+    }
+
+    .time-item:nth-child(odd) .date {
+        border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+    }
+}
+
+/****************************** TECNOLOGIAS **********************************/
+
+.subtec {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.subtec h2 {
+    font-size: 1.25rem;
+    margin: 5px;
+}
+
+.card-list {
+	text-align: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    float: left;
+    padding: 5px;
+    margin: 15px;
+    height: 115px;
+    width: 115px;
+    background-color: var(--white);
+}
+
+.card img{
+    height: 60px;
+    width: 60px;
+}
+
+.card:hover {
+	transform: translateY(-0.5rem) scale(1.0125);
+	box-shadow: 0 0.5em 3rem -1rem var(--white);
+}
+
+.card-description {
+	color: var(--grey);
+    font-weight: 500;
+}
