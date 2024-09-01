@@ -104,13 +104,13 @@
                         <br>
                         <div class="tooltip">tecnologias
                             <ul class="tooltiptext">
-                                <li>JAVA 8</li>
-                                <li>SWING</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JAVASCRIPT</li>
+                                <li>JAVA 8-11</li>
+                                <li>PRIME REACT Y CSS</li>
+                                <li>ORACLE PL/SQL</li>
                                 <li>MYSQL</li>
-                                <li>APACHE POI</li>
+                                <li>MICROSOFT SQL SERVER</li>
+                                <li>JUNIT 4-5 Y MOCKITO</li>
+                                <li>GIT CSM</li>
                             </ul>
                         </div>
                     </div>
@@ -126,13 +126,12 @@
                         <br>
                         <div class="tooltip">tecnologias
                             <ul class="tooltiptext">
-                                <li>JAVA 8</li>
-                                <li>SWING</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JAVASCRIPT</li>
-                                <li>MYSQL</li>
-                                <li>APACHE POI</li>
+                                <li>JAVA 11</li>
+                                <li>SPRINGBOOT Y MAVEN</li>
+                                <li>ANGULAR, TYPESCRIPT, CSS</li>
+                                <li>MICROSOFT SQL SERVER</li>
+                                <li>JUNIT 4-5 Y MOCKITO</li>
+                                <li>GIT CSM</li>
                             </ul>
                         </div>
                     </div>
@@ -150,12 +149,12 @@
                         <div class="tooltip">tecnologias
                             <ul class="tooltiptext">
                                 <li>JAVA 8</li>
-                                <li>SWING</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JAVASCRIPT</li>
-                                <li>MYSQL</li>
-                                <li>APACHE POI</li>
+                                <li>SPRINGBOOT Y GRADLE</li>
+                                <li>JSF, AJAX, CSS Y PRIMEFACES</li>
+                                <li>JENKINS</li>
+                                <li>MYSQL Y LIQUIBASE</li>
+                                <li>JUNIT 4-5 Y MOCKITO</li>
+                                <li>GIT CSM</li>
                             </ul>
                         </div>
                     </div>
@@ -172,12 +171,11 @@
                         <div class="tooltip">tecnologias
                             <ul class="tooltiptext">
                                 <li>JAVA 8</li>
-                                <li>SWING</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JAVASCRIPT</li>
+                                <li>SPRINGBOOT Y MAVEN</li>
+                                <li>JSF, HTML Y CSS</li>
                                 <li>MYSQL</li>
-                                <li>APACHE POI</li>
+                                <li>JUNIT 4-5 Y MOCKITO</li>
+                                <li>GIT CSM</li>
                             </ul>
                         </div> 
                     </div>
@@ -195,7 +193,7 @@
                                 <li>JAVA 8</li>
                                 <li>SWING</li>
                                 <li>HTML</li>
-                                <li>CSS</li>
+                                <li>CSS Y BOOTSTRAP</li>
                                 <li>JAVASCRIPT</li>
                                 <li>MYSQL</li>
                                 <li>APACHE POI</li>
@@ -475,6 +473,10 @@
                 <h2>Contactame</h2>
                 <div class="email-inputs">
                     <div class="email-data">
+                        <input type="text" id="fullname" required> 
+                        <label>Nombre Completo</label>                       
+                    </div>
+                    <div class="email-data">
                         <input type="email" id="email" required> 
                         <label>Email</label>                       
                     </div>
@@ -488,6 +490,17 @@
                     <label>Mensaje</label>                   
                 </div>
                 <button class="btn-email" onclick="sendEmail(event)">Enviar</button>
+            </form>
+            <form class="emailModalContent" id="resultOK">
+                <h2>¡Su correo fue enviado con éxito!</h2>
+                <button class="btn-email" onclick="closeEmailModal()">Cerrar</button>
+            </form>
+            <form class="emailModalContent" id="resultKO">
+                <h2>¡Su correo no pudo ser enviado a juanmarcos.sandoval@gmail.com!</h2>
+                <button class="btn-email" onclick="closeEmailModal()">Cerrar</button>
+            </form>
+            <form class="emailModalContent" id="sending">
+                <h2>Enviando correo...</h2>
             </form>
         </div>
     </div>

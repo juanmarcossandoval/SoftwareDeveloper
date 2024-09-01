@@ -72,6 +72,7 @@ body {
 .emailModalContent{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: var(--modal-content-background);
     border: 0.2rem solid var(--black);
@@ -169,6 +170,12 @@ body {
     border-radius: 5px;
     font-size: 1.25rem;
     cursor: pointer;
+}
+
+#resultOK,
+#resultKO,
+#sending{
+    display: none;
 }
 
 /**************************** ESTILO DE LAS PESTAÑAS DEL MAIN ****************************/

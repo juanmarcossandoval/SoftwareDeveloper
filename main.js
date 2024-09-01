@@ -1,4 +1,7 @@
 const modal = document.getElementById("emailModal");
+const sending = document.getElementById("sending");
+const resultOK = document.getElementById("resultOK");
+const resultKO = document.getElementById("resultKO");
 
 function openSection(evt, section) {
 
@@ -25,29 +28,43 @@ function openEmailModal(){
 }
 
 function closeEmailModal() {
+    document.getElementById("subject").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("msg").value = "";
+    document.getElementById("fullname").value = "";
+    resultOK.style.display = "none";
+    resultKO.style.display = "none";
+    sending.style.display = "none"
     modal.style.display = "none";
 }
 
 function sendEmail(event) {
 
     event.preventDefault();
+    sending.style.display = "flex"; 
 
     const asunto = document.getElementById("subject").value;
     const mail = document.getElementById("email").value;
     const mensaje = document.getElementById("msg").value;
+    const nombre = document.getElementById("fullname").value;
 
     var templateParams = {
         subject: asunto,
+        name: nombre,
         email: mail,
-        msg: mensaje
+        msg: mensaje,
+        reply_to: mail       
     };
 
-    emailjs.send('jms_portfolio_email', 'jsm_template', templateParams).then(
+    emailjs.send('jms_portfolio_email', 'contacto_portfolio', templateParams).then(
         (response) => {
-            console.log('SUCCESS!', response.status, response.text);
+            sending.style.display = "none";
+            resultOK.style.display ="flex";
         },
         (error) => {
-            console.log('FAILED...', error);
+            sending.style.display = "none";
+            resultKO.style.display ="flex";
         },
     );
+
 }
