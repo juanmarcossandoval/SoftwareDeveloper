@@ -1,29 +1,29 @@
-:root{
-    --black:#1b1f23;
+:root {
+    --black: #1b1f23;
     --spring: #6db52c;
     --grey: #262b2c;
     --grey-two: #323839;
     --white: #fefffe;
     --invalid: #c70f0f;
     --modal-background: rgba(249, 249, 249, 0.4);
-    --modal-content-background: #e7e1d7;
+    --modal-content-background: #d3e5d4;
 }
 
 body {
     margin: 0;
     color: var(--white);
     background-color: var(--black);
-    font-family: "Montserrat", sans-serif; 
+    font-family: "Montserrat", sans-serif;
 }
 
 /**************************** FLOATING LINKS ****************************/
-.links{
+.links {
     position: fixed;
     bottom: 0;
     right: 0;
 }
 
-.item-link{
+.item-link {
     margin: 10px;
 }
 
@@ -34,14 +34,14 @@ body {
     border-radius: 50%;
 }
 
-.item-link img:hover{
+.item-link img:hover {
     transform: translateY(-0.5rem) scale(1.0125);
-	box-shadow: 0.15rem 0.15rem 0.35rem  var(--white); 
+    box-shadow: 0.15rem 0.15rem 0.35rem var(--white);
 }
 
 /**************************** EMAIL MODAL ****************************/
 
-.closeEmailModal{
+.closeEmailModal {
     position: fixed;
     top: 30px;
     right: 30px;
@@ -60,7 +60,6 @@ body {
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%;
@@ -69,7 +68,7 @@ body {
     background-color: var(--modal-background);
 }
 
-.emailModalContent{
+.emailModalContent {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,7 +96,7 @@ body {
     width: 100%;
 }
 
-.email-inputs div{
+.email-inputs div {
     position: relative;
     display: flex;
     width: 40%;
@@ -122,11 +121,7 @@ body {
     color: var(--spring);
 }
 
-.email-data input:invalid ~ label{
-    color: var(--invalid);
-}
-
-.email-msg{
+.email-msg {
     position: relative;
     justify-content: center;
     width: 100%;
@@ -135,14 +130,14 @@ body {
     margin-bottom: 2rem;
 }
 
-.email-msg label{
+.email-msg label {
     position: absolute;
     top: -2rem;
     left: 10%;
     color: var(--spring);
 }
 
-.email-msg textarea{
+.email-msg textarea {
     background: transparent;
     outline: none;
     -webkit-box-shadow: none;
@@ -157,11 +152,11 @@ body {
     height: 100%;
 }
 
-.email-msg textarea:invalid ~ label {
-    color: var(--invalid);
-} 
+.invalid-label {
+    color: var(--invalid) !important;
+}
 
-.btn-email{
+.btn-email {
     width: 120px;
     height: 60px;
     color: var(--white);
@@ -172,9 +167,12 @@ body {
     cursor: pointer;
 }
 
-#resultOK,
-#resultKO,
-#sending{
+.btn-email:disabled {
+    background-color: var(--invalid);
+    cursor: no-drop;
+}
+
+#result {
     display: none;
 }
 
@@ -197,12 +195,12 @@ body {
     margin: 0;
 }
 
-#name{
+#name {
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-#profesion{
+#profesion {
     font-size: 1.25rem;
 }
 
@@ -226,7 +224,7 @@ body {
     font-size: 1.25rem;
 }
 
-.menu button:hover{
+.menu button:hover {
     background-color: var(--black);
     border-top: var(--grey-two);
     border-style: solid;
@@ -246,11 +244,11 @@ body {
 
 /************************************ ASIDE ***********************************/
 
-.perfil{
+.perfil {
     display: flex;
 }
 
-.detalles{
+.detalles {
     display: flex;
     flex-direction: column;
     width: 20%;
@@ -266,13 +264,13 @@ body {
     margin: 25px;
 }
 
-.item{
+.item {
     display: flex;
     align-items: center;
     padding-left: 1rem;
 }
 
-.item:hover{
+.item:hover {
     border-left: 5px solid var(--spring);
     font-weight: bold;
 }
@@ -281,8 +279,8 @@ body {
     height: 32px;
 }
 
-.item p{
-    margin:1rem;
+.item p {
+    margin: 1rem;
 }
 
 .sobremi {
@@ -439,8 +437,6 @@ body {
     opacity: 1;
 }
 
-
-
 @media (min-width: 40rem) {
     .time {
         grid-template-columns: 1fr var(--line-w) 1fr;
@@ -492,7 +488,7 @@ body {
 }
 
 .card-list {
-	text-align: center;
+    text-align: center;
 }
 
 .card {
@@ -508,17 +504,17 @@ body {
     background-color: var(--white);
 }
 
-.card img{
+.card img {
     height: 60px;
     width: 60px;
 }
 
 .card:hover {
-	transform: translateY(-0.5rem) scale(1.0125);
-	box-shadow: 0 0.5em 3rem -1rem var(--white);
+    transform: translateY(-0.5rem) scale(1.0125);
+    box-shadow: 0 0.5em 3rem -1rem var(--white);
 }
 
 .card-description {
-	color: var(--grey);
+    color: var(--grey);
     font-weight: 500;
 }

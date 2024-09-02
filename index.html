@@ -26,9 +26,9 @@
                 <p id="profesion">Desarrollador Full Stack</p>
             </div>
             <div class="buttons">
-                <button class="tablinks" onclick="openSection(event, 'Aboutme')" id="defaultOpen">SOBRE MI</button>
-                <button class="tablinks" onclick="openSection(event, 'Experience')">EXPERIENCIA</button>
-                <button class="tablinks" onclick="openSection(event, 'Tecnologys')">TECNOLOGIAS</button>
+                <button type="button" class="tablinks" onclick="openSection(event, 'Aboutme')" id="defaultOpen">SOBRE MI</button>
+                <button type="button" class="tablinks" onclick="openSection(event, 'Experience')">EXPERIENCIA</button>
+                <button type="button" class="tablinks" onclick="openSection(event, 'Tecnologys')">TECNOLOGIAS</button>
             </div>
         </div>
     
@@ -38,35 +38,25 @@
                     <div class="foto"></div>
                 
                     <div class="item">
-                        <img class="icon" src="img/ico/facu.ico">
+                        <img class="icon" src="img/ico/facu.ico" alt="formacion academica">
                         <p>Licenciatura en sistemas <br>
                             UNLP (inconcluso)</p>
                     </div>
                 
                     <div class="item">
-                        <img class="icon" src="img/ico/facu.ico">
+                        <img class="icon" src="img/ico/facu.ico" alt="formacion academica">
                         <p>Técnico analista de sistemas <br>
                             IFTyD N°12 (graduado)</p>
                     </div>
                 
-                    <!--div class="item">
-                        <img class="icon" src="img/ico/telefono.ico">
-                        <p>+ 54 9 221 6168183</p>
-                    </div>
-                
                     <div class="item">
-                        <img class="icon" src="img/ico/email.ico">
-                        <p>juanmarcos.sandoval@gmail.com</p>
-                    </div-->
-                
-                    <div class="item">
-                        <img class="icon" src="img/ico/casa.ico">
+                        <img class="icon" src="img/ico/casa.ico" alt="domicilio">
                         <p>Magdalena, Buenos Aires</p>
                     </div>
                 
                     <div class="item">
-                        <img class="icon" src="img/ico/nacimiento.ico">
-                        <p>20-12-1990</p>
+                        <img class="icon" src="img/ico/nacimiento.ico" alt="fecha nacimiento">
+                        <p id="edad"></p>
                     </div>
                 </div>
             
@@ -102,7 +92,7 @@
                         Soporte y mantenimiento de microservicios, servicios soap cifrados y servicios rest.
                         Manipulación de certificados X509. Integración con Active Directory. Maquetado web en PrimeReact.
                         <br>
-                        <div class="tooltip">tecnologias
+                        <div class="tooltip">tecnologias?
                             <ul class="tooltiptext">
                                 <li>JAVA 8-11</li>
                                 <li>PRIME REACT Y CSS</li>
@@ -124,7 +114,7 @@
                         Diseño web y programación reactiva en ANGULAR 10 y  RxJs. 
                         Desarrollo continuo y despliegue de versiones Canarias.
                         <br>
-                        <div class="tooltip">tecnologias
+                        <div class="tooltip">tecnologias?
                             <ul class="tooltiptext">
                                 <li>JAVA 11</li>
                                 <li>SPRINGBOOT Y MAVEN</li>
@@ -146,7 +136,7 @@
                         Integración continua y despliegue con Jenkins.  
                         Introducción, adaptación y seguimiento de los dev trainees.
                         <br>
-                        <div class="tooltip">tecnologias
+                        <div class="tooltip">tecnologias?
                             <ul class="tooltiptext">
                                 <li>JAVA 8</li>
                                 <li>SPRINGBOOT Y GRADLE</li>
@@ -168,7 +158,7 @@
                         Desarrollo y mantenimiento de microservicios en sprinboot. 
                         Automatización de envio de emails promocionales e informativos.
                         <br>
-                        <div class="tooltip">tecnologias
+                        <div class="tooltip">tecnologias?
                             <ul class="tooltiptext">
                                 <li>JAVA 8</li>
                                 <li>SPRINGBOOT Y MAVEN</li>
@@ -188,7 +178,7 @@
                         Relevamiento, análisis, diseño e implementación de un sistema de auditorias asistido por procesamiento de datos.
                         Realización de documentación, puesta en marcha y capacitación al personal para su uso.
                         <br>
-                        <div class="tooltip">tecnologias
+                        <div class="tooltip">tecnologias?
                             <ul class="tooltiptext">
                                 <li>JAVA 8</li>
                                 <li>SWING</li>
@@ -443,65 +433,57 @@
         <div class="links">
             <div class="item-link">
                 <a onclick="openEmailModal()">
-                <img src="img/links/email.png"></a>
+                <img src="img/links/email.png" alt="e-mail"></a>
             </div>
 
             <div class="item-link">
                 <a href="https://wa.me/5492216168183" target="_blank">
-                <img src="img/links/whatsapp.png"></a>
+                <img src="img/links/whatsapp.png" alt="WhattsApp"></a>
             </div>
 
             <div class="item-link">
                 <a href="https://github.com/juanmarcossandoval" target="_blank">
-                <img src="img/links/github.png"></a>                
+                <img src="img/links/github.png" alt="Github"></a>                
             </div>
 
             <div class="item-link">
                 <a href="https://www.linkedin.com/in/juan-marcos-sandoval/" target="_blank">
-                <img src="img/links/linkedin.png"></a>
+                <img src="img/links/linkedin.png" alt="LinkedIn"></a>
             </div>
 
             <div class="item-link">
                 <a href="img/Juan Marcos Sandoval CV.pdf" download target="_blank">
-                <img src="img/links/CV.png"></a>
+                <img src="img/links/CV.png" alt="Curriculum"></a>
             </div>
         </div>
 
         <div id="emailModal" class="emailModal">
             <span class="closeEmailModal" onclick="closeEmailModal()">X</span>
-            <form class="emailModalContent">
+            <div class="emailModalContent" id="emailForm">
                 <h2>Contactame</h2>
                 <div class="email-inputs">
                     <div class="email-data">
-                        <input type="text" id="fullname" required> 
-                        <label>Nombre Completo</label>                       
+                        <input type="text" id="fullname" spellcheck="false"> 
+                        <label id="fullname-lbl">Nombre Completo</label>                       
                     </div>
                     <div class="email-data">
-                        <input type="email" id="email" required> 
-                        <label>Email</label>                       
+                        <input type="email" id="email" spellcheck="false"> 
+                        <label id="email-lbl">Email</label>                       
                     </div>
                     <div class="email-data">
-                        <input type="text" id="subject" required>
-                        <label>Asunto</label>                    
+                        <input type="text" id="subject" spellcheck="false">
+                        <label id="subj-lbl">Asunto</label>                    
                     </div>
                 </div>                
                 <div class="email-msg">
-                    <textarea id="msg" placeholder="Escriba aqui su mensaje" required spellcheck="false"></textarea>
-                    <label>Mensaje</label>                   
+                    <textarea id="msg" placeholder="Escriba aqui su mensaje" spellcheck="false"></textarea>
+                    <label id="msg-lbl">Mensaje</label>                   
                 </div>
-                <button class="btn-email" onclick="sendEmail(event)">Enviar</button>
-            </form>
-            <form class="emailModalContent" id="resultOK">
-                <h2>¡Su correo fue enviado con éxito!</h2>
-                <button class="btn-email" onclick="closeEmailModal()">Cerrar</button>
-            </form>
-            <form class="emailModalContent" id="resultKO">
-                <h2>¡Su correo no pudo ser enviado a juanmarcos.sandoval@gmail.com!</h2>
-                <button class="btn-email" onclick="closeEmailModal()">Cerrar</button>
-            </form>
-            <form class="emailModalContent" id="sending">
-                <h2>Enviando correo...</h2>
-            </form>
+                <button type="button" class="btn-email" id="send-btn" onclick="sendEmail(event)" disabled>Enviar</button>
+            </div>
+            <div class="emailModalContent" id="result">
+                <h2 id="result-msg"></h2>
+            </div>
         </div>
     </div>
     <script src="main.js"></script>
