@@ -26,8 +26,16 @@ function openSection(evt, section) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
-    document.getElementById(section).style.display = "block";
+    document.getElementById(section).style.display = "flex";
     evt.currentTarget.className += " active";
+
+    if (document.documentElement.clientWidth < 900){
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.display = "none";
+        }
+    } else {
+        console.log("no aplica");
+    }
 }
 
 document.getElementById('defaultOpen').click();
@@ -130,3 +138,14 @@ fullname_inp.addEventListener('keyup', (event) => {
 mail_inp.addEventListener('keyup', (event) => {
     validateFields();
 });
+
+function openMenu() {
+    
+    var tablinks = document.getElementsByClassName("tablinks");
+
+    for(var i = 0; i < tablinks.length; i++){
+        tablinks[i].style.display == "none" ?
+        tablinks[i].style.display = "flex" :
+        tablinks[i].style.display = "none" 
+    };
+}

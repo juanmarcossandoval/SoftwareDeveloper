@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <title>JMS Fullstack Developer</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
@@ -20,7 +21,7 @@
 <body>
     
     <div class="container">
-        <div class="menu">
+        <div class="menu" id="nav_menu">
             <div class="principal">
                 <p id="name">Juan Marcos Sandoval</p>
                 <p id="profesion">Desarrollador Full Stack</p>
@@ -30,54 +31,63 @@
                 <button type="button" class="tablinks" onclick="openSection(event, 'Experience')">EXPERIENCIA</button>
                 <button type="button" class="tablinks" onclick="openSection(event, 'Tecnologys')">TECNOLOGIAS</button>
             </div>
+            <button type="button" class="fa_btn" onclick="openMenu()"> <i class="fa fa-bars"></i></button>
         </div>
     
         <div id="Aboutme" class="tabcontent">
             <div class="perfil">
+                <div class="foto"></div>
                 <div class="detalles">
-                    <div class="foto"></div>
-                
+                    
                     <div class="item">
-                        <img class="icon" src="img/ico/facu.ico" alt="formacion academica">
+                        <i class="fa-solid fa-graduation-cap"></i>
                         <p>Licenciatura en sistemas <br>
                             UNLP (inconcluso)</p>
                     </div>
                 
                     <div class="item">
-                        <img class="icon" src="img/ico/facu.ico" alt="formacion academica">
+                        <i class="fa-solid fa-user-graduate"></i>
                         <p>Técnico analista de sistemas <br>
                             IFTyD N°12 (graduado)</p>
                     </div>
                 
                     <div class="item">
-                        <img class="icon" src="img/ico/casa.ico" alt="domicilio">
+                        <i class="fa-solid fa-map-location-dot"></i>
                         <p>Magdalena, Buenos Aires</p>
                     </div>
                 
                     <div class="item">
-                        <img class="icon" src="img/ico/nacimiento.ico" alt="fecha nacimiento">
+                        <i class="fa-solid fa-cake-candles"></i>
                         <p id="edad"></p>
                     </div>
+                    
                 </div>
+            </div>
             
-                <div class="sobremi">
-
-                    <p>
-                        Poseo 5 años de experiencia desarrollando programación orientada a objetos, programación orientada aspectos, programación funcional, micro servicios, servicios REST, SOAP, aplicaciones web o de escritorio, así como también en soporte y mantenimiento a proyectos legacy. 
-                    </p>
-                        
-                    <p>
-                        He trabajado JAVA desde versión 6 a 21 y sus frameworks mas conocidos, implementando lo mejor posible los principios de SOLID, clean code y patrones de diseño. Tengo amplio manejo de tecnologías para diseño y maquetación web. Además utilizo motores de bases de datos relacionales y no relacionales.
-                    </p>
-
-                    <p>
-                        Estoy acostumbrado a desenvolverme en ambientes ágiles, tanto individualmente como en pequeñas células. Mantengo un carácter sereno cuando los tiempos apremian, expreso de manera directa ideas y posibles soluciones, no reparo en ofrecer ayuda al resto equipo.
-                    </p>
-                
-                    <p>
-                        Estoy interesado en un ambiente laboral que me permita ser autodidacta ante las nuevas tecnologías, adquirir experiencia y poner en práctica mis conocimientos de programación reactiva, DevOps y Cloud. Me encuentro cómodo al tener algo de responsabilidad y en algún momento me gustaría llegar desempeñarme como referente técnico.
-                    </p>
-                </div>
+            <div class="sobremi">
+                <p>
+                    Poseo 5 años de experiencia desarrollando programación orientada a objetos, programación orientada aspectos,
+                    programación funcional, micro servicios, servicios REST, SOAP, aplicaciones web o de escritorio, así como
+                    también en soporte y mantenimiento a proyectos legacy.
+                </p>
+            
+                <p>
+                    He trabajado JAVA desde versión 6 a 21 y sus frameworks mas conocidos, implementando lo mejor posible los
+                    principios de SOLID, clean code y patrones de diseño. Tengo amplio manejo de tecnologías para diseño y
+                    maquetación web. Además utilizo motores de bases de datos relacionales y no relacionales.
+                </p>
+            
+                <p>
+                    Estoy acostumbrado a desenvolverme en ambientes ágiles, tanto individualmente como en pequeñas células. Mantengo
+                    un carácter sereno cuando los tiempos apremian, expreso de manera directa ideas y posibles soluciones, no reparo
+                    en ofrecer ayuda al resto equipo.
+                </p>
+            
+                <p>
+                    Estoy interesado en un ambiente laboral que me permita ser autodidacta ante las nuevas tecnologías, adquirir
+                    experiencia y poner en práctica mis conocimientos de programación reactiva, DevOps y Cloud. Me encuentro cómodo
+                    al tener algo de responsabilidad y en algún momento me gustaría llegar desempeñarme como referente técnico.
+                </p>
             </div>
         </div>
     
@@ -433,27 +443,32 @@
         <div class="links">
             <div class="item-link">
                 <a onclick="openEmailModal()">
-                <img src="img/links/email.png" alt="e-mail"></a>
+                    <i class="fa fa-envelope"></i>
+                </a>
             </div>
 
             <div class="item-link">
                 <a href="https://wa.me/5492216168183" target="_blank">
-                <img src="img/links/whatsapp.png" alt="WhattsApp"></a>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
             </div>
 
             <div class="item-link">
                 <a href="https://github.com/juanmarcossandoval" target="_blank">
-                <img src="img/links/github.png" alt="Github"></a>                
+                    <i class="fa-brands fa-github"></i>
+                </a>                
             </div>
 
             <div class="item-link">
                 <a href="https://www.linkedin.com/in/juan-marcos-sandoval/" target="_blank">
-                <img src="img/links/linkedin.png" alt="LinkedIn"></a>
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
             </div>
 
             <div class="item-link">
                 <a href="img/Juan Marcos Sandoval CV.pdf" download target="_blank">
-                <img src="img/links/CV.png" alt="Curriculum"></a>
+                    <i class="fa fa-file-pdf"></i>
+                </a>
             </div>
         </div>
 
