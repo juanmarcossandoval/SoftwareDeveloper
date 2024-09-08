@@ -51,7 +51,7 @@ function closeEmailModal() {
     fullname_inp.value = "";
     result.style.display = "none";
     result_msg.innerText = "";
-    email_form.style.display = "flex";
+    email_form.style.display = "block";
     modal.style.display = "none";
     btn_send.setAttribute("disabled","");
 }

@@ -475,26 +475,33 @@
         <div id="emailModal" class="emailModal">
             <span class="closeEmailModal" onclick="closeEmailModal()">X</span>
             <div class="emailModalContent" id="emailForm">
-                <h2>Contactame</h2>
-                <div class="email-inputs">
-                    <div class="email-data">
-                        <input type="text" id="fullname" spellcheck="false"> 
-                        <label id="fullname-lbl">Nombre Completo</label>                       
-                    </div>
-                    <div class="email-data">
-                        <input type="email" id="email" spellcheck="false"> 
-                        <label id="email-lbl">Email</label>                       
-                    </div>
-                    <div class="email-data">
-                        <input type="text" id="subject" spellcheck="false">
-                        <label id="subj-lbl">Asunto</label>                    
-                    </div>
-                </div>                
-                <div class="email-msg">
-                    <textarea id="msg" placeholder="Escriba aqui su mensaje" spellcheck="false"></textarea>
-                    <label id="msg-lbl">Mensaje</label>                   
+
+                <h2 id="email-data-h2">Contactame</h2>
+
+                <div class="email-data" id="fullname-div">
+                    <label id="fullname-lbl">Nombre Completo</label>
+                    <input type="text" id="fullname" spellcheck="false">
                 </div>
-                <button type="button" class="btn-email" id="send-btn" onclick="sendEmail(event)" disabled>Enviar</button>
+
+                <div class="email-data" id="email-div">
+                    <label id="email-lbl">Email</label>
+                    <input type="email" id="email" spellcheck="false">
+                </div>
+
+                <div class="email-data" id="subject-div">
+                    <label id="subj-lbl">Asunto</label>
+                    <input type="text" id="subject" spellcheck="false">
+                </div>
+                
+                <div class="email-data" id="msg-div">
+                    <label id="msg-lbl">Mensaje</label>
+                    <textarea id="msg" placeholder="Escriba aqui su mensaje" spellcheck="false"></textarea>
+                </div>
+
+                <div id="btn-div">
+                    <button type="button" class="btn-email" id="send-btn" onclick="sendEmail(event)" disabled>Enviar</button>
+                </div>
+               
             </div>
             <div class="emailModalContent" id="result">
                 <h2 id="result-msg"></h2>
